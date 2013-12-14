@@ -51,7 +51,7 @@ public class Aufgabe3 {
     {
         char[] alphabet = new char[27];
         for (int i = 0; i < 27; i++) {
-            alphabet[i] = (char)(65+i);     //only uppercase letters
+            alphabet[i] = (char)(65+i); //only uppercase letters
         }
         return alphabet;
     }*/
