@@ -14,14 +14,14 @@ public class Aufgabe3 {
         }
     }
 
-    static void setAppMod(String flag, String inputText, int key)
+    static void setAppMod(String flag)
     {
         if (flag.equals("encrypt".toLowerCase())){
             System.out.println("running encryption-mod");
-            System.out.println(encrypt(inputText, key));
+            System.out.println(encrypt());
         } else if (flag.equals("decrypt".toLowerCase())){
             System.out.println("running decryption-mod:");
-            System.out.println(decrypt(inputText, key));
+            System.out.println(decrypt());
         } else {
             String appMod = inputMod();
             setAppMod(appMod, inputText, key);
@@ -72,9 +72,49 @@ public class Aufgabe3 {
         }
         return encryptedText;
     }
+    static String encrypt ()
+    {
+        String originalText = setText(); 
+        int key = setKey();
+        String encryptedText="";
+        
+        originalText = originalText.toUpperCase();
+        for (int i = 0; i < originalText.length(); i++) {
+            if (originalText.charAt(i) >= 'A' && originalText.charAt(i) <= 'Z') {
+                if ((int) originalText.charAt(i) + key % 26 > (int) 'Z') {
+                    encryptedText += (char) ((int) originalText.charAt(i) + key % 26 - 26);
+                } else {
+                    encryptedText += (char) ((int) originalText.charAt(i) + key % 26);
+                }
+            } else {
+                encryptedText += originalText.charAt(i);
+            }
+        }
+        return encryptedText;
+    }
     static String decrypt (String cipher, int key)
     {
         String decryptedText = "";
+        cipher = cipher.toUpperCase();
+        for (int i = 0; i < cipher.length(); i++) {
+            if (cipher.charAt(i) >= 'A' && cipher.charAt(i) <= 'Z') {
+                if ((int) cipher.charAt(i) - key % 26 < (int) 'A') {
+                    decryptedText += (char) ((int) cipher.charAt(i) - key % 26 + 26);
+                } else {
+                    decryptedText += (char) ((int) cipher.charAt(i) - key % 26);
+                }
+            } else {
+                decryptedText += cipher.charAt(i);
+            }
+        }
+        return decryptedText;
+    }
+    static String decrypt ()
+    {
+        String cipher setText();
+        int key = setKey();
+        String decryptedText = "";
+        
         cipher = cipher.toUpperCase();
         for (int i = 0; i < cipher.length(); i++) {
             if (cipher.charAt(i) >= 'A' && cipher.charAt(i) <= 'Z') {
