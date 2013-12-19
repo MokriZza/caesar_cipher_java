@@ -1,5 +1,3 @@
-package GMP8;
-
 import java.util.Scanner;
 
 public class Aufgabe3 {
@@ -55,7 +53,8 @@ public class Aufgabe3 {
         }
         return alphabet;
     }*/
-    static String encrypt (String originalText, int key)
+    
+    /*static String encrypt (String originalText, int key)
     {
         String encryptedText="";
         originalText = originalText.toUpperCase();
@@ -71,7 +70,7 @@ public class Aufgabe3 {
             }
         }
         return encryptedText;
-    }
+    }*/
     static String encrypt ()
     {
         String originalText = setText(); 
@@ -92,7 +91,7 @@ public class Aufgabe3 {
         }
         return encryptedText;
     }
-    static String decrypt (String cipher, int key)
+    /*static String decrypt (String cipher, int key)
     {
         String decryptedText = "";
         cipher = cipher.toUpperCase();
@@ -108,7 +107,7 @@ public class Aufgabe3 {
             }
         }
         return decryptedText;
-    }
+    }*/
     static String decrypt ()
     {
         String cipher setText();
