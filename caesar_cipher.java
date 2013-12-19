@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Aufgabe3 {
+public class CaesarCipher {
     public static void main(String[] args){
         String inputText = setText();
         int key = setKey();
