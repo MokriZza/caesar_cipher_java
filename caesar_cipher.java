@@ -2,13 +2,11 @@ import java.util.Scanner;
 
 public class CaesarCipher {
     public static void main(String[] args){
-        String inputText = setText();
-        int key = setKey();
         if (args.length>0) {
             setAppMod(args[0], inputText, key);
         } else {
             String emptyFlag = "";
-            setAppMod(emptyFlag, inputText, key);
+            setAppMod(emptyFlag);
         }
     }
 
