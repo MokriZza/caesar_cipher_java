@@ -12,15 +12,16 @@ public class CaesarCipher {
 
     static void setAppMod(String flag)
     {
-        if (flag.equals("encrypt".toLowerCase())){
+        flag = flag.toLowerCase().
+        if (flag.equals("encrypt")){
             System.out.println("running encryption-mod");
             System.out.println(encrypt());
-        } else if (flag.equals("decrypt".toLowerCase())){
+        } else if (flag.equals("decrypt")){
             System.out.println("running decryption-mod:");
             System.out.println(decrypt());
         } else {
             String appMod = inputMod();
-            setAppMod(appMod, inputText, key);
+            setAppMod(appMod);
         }
     }
     static String setText()
