@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CaesarCipher {
     public static void main(String[] args){
         if (args.length>0) {
-            setAppMod(args[0], inputText, key);
+            setAppMod(args[0]);
         } else {
             String emptyFlag = "";
             setAppMod(emptyFlag);
